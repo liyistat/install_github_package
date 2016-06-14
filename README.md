@@ -1,4 +1,8 @@
 # install_github_package
 Install Github packages with dependicies
 
-# example
+# Example
+```{r}
+source("https://raw.githubusercontent.com/liyistat/install_github_package/master/install_github.R");
+install_github("liyistat/iroc")
+```
