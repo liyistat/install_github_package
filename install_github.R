@@ -1,23 +1,3 @@
-#' install_github installs R packages directly from GitHub
-#' 
-#' install_github is a very lightweight function with no dependencies
-#' that installs R packages from GitHub.
-#' 
-#' @param repo identifies the GitHub repository, i.e. username/repo. Also flexibly 
-#'   accepts arguments of the form username/repo@branch.
-#' @param branch identifies the branch (optional)
-#' @param dependencies is a vector that indicates which type of additional 
-#'   packages are also to be installed. It can include any of the values in 
-#'   \code{c("Depends", "Imports", "LinkingTo", "Suggests", "Enhances")}. A 
-#'   value of \code{TRUE} corresponds to \code{c("Depends", "Imports", 
-#'   "LinkingTo")}. If \code{dependencies} equals \code{FALSE} no further 
-#'   packages will be installed.
-#' @param method specifies which method \code{download.file} uses to download 
-#'   the zip archive from GitHub. Can be set to any of the values in 
-#'   \code{c("auto", "wget", "libcurl", "curl", "wininet")}. When set to 
-#'   \code{auto}, this function will make an educated guess.
-#' @examples
-#' \dontrun{install_github("liyistat/iroc")}
 install_github = function(repo, 
                           branch = if (grepl("@", repo)) gsub(".*@", "", repo) else "master", 
                           dependencies = TRUE, method = "auto") {
