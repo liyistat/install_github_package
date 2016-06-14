@@ -17,7 +17,7 @@
 #'   \code{c("auto", "wget", "libcurl", "curl", "wininet")}. When set to 
 #'   \code{auto}, this function will make an educated guess.
 #' @examples
-#' \dontrun{install_github("jtilly/matchingR")}
+#' \dontrun{install_github("liyistat/iroc")}
 install_github = function(repo, 
                           branch = if (grepl("@", repo)) gsub(".*@", "", repo) else "master", 
                           dependencies = TRUE, method = "auto") {
